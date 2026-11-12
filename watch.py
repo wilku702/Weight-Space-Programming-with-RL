@@ -12,7 +12,7 @@ env = gym.wrappers.NormalizeReward(env, gamma=0.99)
 n_inputs, n_actions = env.observation_space.shape[0], env.action_space.shape[0]
 
 actor = Actor(n_inputs, 256, n_actions)          # h_size must match training
-file_name = "../runs/standup/latest.pt"
+file_name = "./runs/standup/latest.pt"
 
 actor.load_state_dict(torch.load(file_name, weights_only=False)["actor"])
 actor.eval()

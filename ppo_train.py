@@ -64,7 +64,7 @@ if __name__ == '__main__':
     actor = Actor( n_inputs, h_size, n_actions )
     critic = Critic( n_inputs, h_size )
     
-    path = '../runs/standup/'
+    path = './runs/standup/'
     file_name = 'latest.pt'
     
     old_critic = Critic( n_inputs, h_size )
